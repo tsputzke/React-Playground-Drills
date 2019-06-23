@@ -3,6 +3,8 @@ import './App.css';
 import Messages from './Messages';
 import TheDate from './state/TheDate';
 import Counter from './state/Counter';
+import HelloWorld from './state-drills/HelloWorld'
+import Bomb from './state-drills/Bomb'
 
 class App extends Component {
   render() {
@@ -13,6 +15,8 @@ class App extends Component {
         <Messages name="Notifications" unread={10}/>
         <TheDate />
         <Counter step={3} />
+        <HelloWorld />
+        <Bomb />
       </div>
     );
   }
