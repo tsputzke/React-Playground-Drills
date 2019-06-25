@@ -1,9 +1,10 @@
 import React from 'react';
+import './Accordion.css'
 
-class Acordian extends React.Component {
+class Acordion extends React.Component {
   static defaultProps = { sections: []};
   state = {
-    currentTabIndex: 0
+    currentTabIndex: null
   };
   handleButtonClick(index) {
     this.setState({
@@ -13,17 +14,19 @@ class Acordian extends React.Component {
   renderButtons() {
     return this.props.sections.map((tab, index) => (
       <li  key={index}>
-        <button onClick={() => this.handleButtonClick(index)}>
+        <button className="button-styles" onClick={() => this.handleButtonClick(index)}>
         {tab.title}
         </button>
       </li>
     ))
   }
   renderContent() {
-    const currentTab = this.props.sections[this.state.currentTabIndex]
-    return (
-      <p>{currentTab.content}</p>
-    )
+    if(this.state.currentTabIndex != null) {
+      const currentTab = this.props.sections[this.state.currentTabIndex]
+      return (
+        <p>{currentTab.content}</p>
+      )
+    }
   }
   render() {
     return (
@@ -37,4 +40,4 @@ class Acordian extends React.Component {
   }
 }
 
-export default Acordian
+export default Acordion
