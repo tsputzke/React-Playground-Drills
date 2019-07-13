@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import RegistrationForm from './registrationForm/registrationForm';
 // import Messages from './Messages';
 // import TheDate from './state/TheDate';
 // import Counter from './state/Counter';
@@ -8,7 +9,7 @@ import './App.css';
 // import RouletteGun from './state-drills/RouletteGun';
 // import Tabs from './state/Tabs';
 // import Accordion from './state-drills/Accordian';
-import DemonymApp from './DemonymApp/demonymApp';
+// import DemonymApp from './DemonymApp/demonymApp';
 
 // const tabsProp = [
 //   { name: 'First tab',
@@ -47,7 +48,8 @@ class App extends Component {
         <RouletteGun  bulletInChamber={3} />
         <Tabs tabs={tabsProp}/>
         <Accordion sections={sections}/> */}
-        <DemonymApp />
+        {/* <DemonymApp /> */}
+        <RegistrationForm />
       </div>
     );
   }
